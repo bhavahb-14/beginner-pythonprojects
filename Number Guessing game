@@ -1,0 +1,24 @@
+#importing random module
+import random   
+player_chances = 0   #initial user chances
+
+print("Welcome To Guessing number game")
+print("please , Enter your Name :")        #user game
+name = input()
+
+num = random.randint(1,50)
+print("Well,"+name+"Enter the number between 1 to 50:")              # guessing number b/w 1 to 50
+
+while player_chances < 5:                          # checking users guess
+    guess = int(input())
+    if guess == num:
+       print("CONGRATS,"+name+"You won the Game!!!,TRYAGAIN"+name)
+    elif guess > num: 
+        print("Your guess is too HIGH")
+    else guess < num: 
+        print("Your guess is too LOW, TRYAGAIN"+name)
+
+if not player_chances < 3                            #to check users chances   
+   print("You loss , The number is"+name)
+   
+   
